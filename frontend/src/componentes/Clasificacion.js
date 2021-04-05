@@ -1,14 +1,16 @@
+import React from 'react';
+
 export default function Clasificacion(accesorios)
 {
-    const {clasificacion, visitas } = accesorios;
+    const { clasificacion, visitas } = accesorios;
     return(
         <div className="clasificacion">
                 <span>
                     <i 
                         className={ 
-                            clasificacion >=1
+                            clasificacion >= 1
                                 ? 'fa fa-star'
-                                : clasificacion >=0.5
+                                : clasificacion >= 0.5
                                 ? 'fa fa-star-half-o'
                                 : 'fa fa-star-o'
                         }
@@ -17,9 +19,9 @@ export default function Clasificacion(accesorios)
                     <span>
                     <i 
                         className={ 
-                            clasificacion >=2
+                            clasificacion >= 2
                                 ? 'fa fa-star'
-                                : clasificacion >=1.5
+                                : clasificacion >= 1.5
                                 ? 'fa fa-star-half-o'
                                 : 'fa fa-star-o'
                         }
@@ -28,9 +30,9 @@ export default function Clasificacion(accesorios)
                     <span>
                     <i 
                         className={ 
-                            clasificacion >=3
+                            clasificacion >= 3
                                 ? 'fa fa-star'
-                                : clasificacion >=2.5
+                                : clasificacion >= 2.5
                                 ? 'fa fa-star-half-o'
                                 : 'fa fa-star-o'
                         }
@@ -39,9 +41,9 @@ export default function Clasificacion(accesorios)
                     <span>
                     <i 
                         className={ 
-                            clasificacion >=4
+                            clasificacion >= 4
                                 ? 'fa fa-star'
-                                : clasificacion >=3.5
+                                : clasificacion >= 3.5
                                 ? 'fa fa-star-half-o'
                                 : 'fa fa-star-o'
                         }
@@ -50,9 +52,9 @@ export default function Clasificacion(accesorios)
                     <span>
                     <i 
                         className={ 
-                            clasificacion >=5
+                            clasificacion >= 5
                                 ? 'fa fa-star'
-                                : clasificacion >=4.5
+                                : clasificacion >= 4.5
                                 ? 'fa fa-star-half-o'
                                 : 'fa fa-star-o'
                         }
@@ -62,5 +64,5 @@ export default function Clasificacion(accesorios)
                         { visitas + 'visitas'}
                     </span>
             </div>
-    )
+    );
 }
