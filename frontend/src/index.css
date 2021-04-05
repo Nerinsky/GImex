@@ -1,0 +1,193 @@
+html
+{
+    font-size: 62.5%; /* 16px *62.5 = 10px = 1rem(rem= unidad relativa se usa para el responsivo)*/
+    box-sizing: border-box;
+}
+body
+{
+    margin:0;
+    height: 100vh; /*vh es una medida relativa de acuerdo al viewport. Vh hace referencia a la centésima parte de la altura del viewport */
+    font-size: 1.6rem;
+    font-family: Helvetica, Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#root
+{
+    height: 100%;
+}
+
+/*Estilo Diseño*/
+.grid-container
+{
+    display: grid; /* Es responsivo y flexible*/
+    grid-template-areas: 
+            'header'
+            'main'
+            'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100%;
+}
+header
+{
+    grid-area: header;
+    background-color: #2874A6;
+}
+main
+{
+    grid-area: main;
+    padding: 1rem;
+}
+footer
+{
+    grid-area: footer;
+    background-color: #2874A6;
+    color: #fff;
+}
+
+/* Comunes*/
+h1
+{
+    font-size: 1.8rem;
+    padding: 1rem 0;
+}
+h2
+{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+}
+a
+{
+    text-decoration: none;
+}
+a:hover
+{
+    color: #F4D03F;
+}
+ul
+{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+li
+{
+    margin-top: 1rem;
+}
+button
+{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0.1rem #a4a4a4 solid;
+    font-size: 1.6rem;
+    font-family: Helvetica, Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+button:hover
+{
+    border: 0.1rem #404040 solid;
+}
+button.primario
+{
+    background-color: #f0c040;
+}
+button.bloque
+{
+    width: 100%;
+}
+/*Estilo Header*/
+header a
+{
+    color: #FBFCFC;
+    padding: 1rem;
+}
+a.logo
+{
+    color: #FBFCFC;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.row.center
+{
+    justify-content: center;
+
+}
+.row.top
+{
+    align-items: flex-start;
+}
+.col-1
+{
+    flex: 1 1 25rem;
+}
+.col-2
+{
+    flex: 2 1 50rem;
+}
+
+/*Estilo Imagenes*/
+img
+{
+    border-radius: 0.5rem;
+}
+img.medio
+{
+    max-width: 29rem;
+    width: 100%;
+}
+img.largo
+{
+    width: 100%;
+}
+
+/*Estilo Tarjeta*/
+.tarjeta
+{
+    border: 0.1rem #c0c0c0 solid;
+    background-color: #f8f8f8;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+.tarjeta-cuerpo
+{
+    padding: 1rem;
+}
+.tarjeta-cuerpo > *
+{
+    margin-bottom: 0.5rem;
+}
+.precio
+{
+    font-size: 2rem;
+}
+/* Estilo Clasificacion*/
+.clasificacion span
+{
+    color: #f0c040;
+    margin: 0.1rem;
+}
+.clasificacion span:last-child
+{
+    color: #000;
+}
+/*Alertas*/
+.éxito
+{
+    color: #20a020;
+}
+.error
+{
+    color: #ff0000;
+}
+
