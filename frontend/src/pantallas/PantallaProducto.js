@@ -51,7 +51,7 @@ export default function PantallaProductos(accesorios)
                                     <div>Estado</div>
                                     <div>
                                         {producto.existencia > 0 ? ( <span className="éxito">En existencia</span>) : (
-                                        <span className="error">No Disponible</span>
+                                        <span className="danger">No Disponible</span>
                                     )
                                         }
                                     </div>
