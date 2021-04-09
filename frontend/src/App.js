@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route} from 'react-router-dom';
 import PantallaInicio from './pantallas/PantallaInicio';
-import PantallaProductos from './pantallas/PantallaProductos';
+import PantallaProductos from './pantallas/PantallaProducto';
 
 
 function App() {

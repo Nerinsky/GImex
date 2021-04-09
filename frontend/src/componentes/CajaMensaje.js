@@ -4,7 +4,7 @@ export default function CajaMensaje(accesorios)
 {
     return(
         <div className={`alert alert-${accesorios.variant || 'informacion'}`}>
-            {accesorios.adulto}
+            {accesorios.children}
         </div>     
     )
 }

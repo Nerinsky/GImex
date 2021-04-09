@@ -3,7 +3,7 @@ import dato from './dato.js';
 
 const app = express();
 
-app.get('/api/productos',(solicitud,respuesta) =>
+app.get('/api/productos', (solicitud,respuesta) =>
 {
     respuesta.send(dato.productos);
 })

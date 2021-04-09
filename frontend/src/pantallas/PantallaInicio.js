@@ -4,14 +4,16 @@ import axios from 'axios';
 import CajaCarga from '../componentes/CajaCarga';
 import CajaMensaje from '../componentes/CajaMensaje';
 
+
 export default function PantallaInicio()
 {
     const [productos, setProductos] = useState([]);
     const [cargando, setCarga] = useState(false);
     const [error, setError] = useState(false);
+    
     useEffect(() =>
     {
-        const fecthDato = async () =>
+        const fecthData = async () =>
         {
             try
             {
@@ -27,7 +29,7 @@ export default function PantallaInicio()
             }
             
         };
-        fecthDato();
+        fecthData();
     }, []);
     return(
         <div>
@@ -36,8 +38,7 @@ export default function PantallaInicio()
             error ? (<CajaMensaje variant="danger">{error}</CajaMensaje>)
             : (
             <div className="row center">
-            {
-                productos.map((producto) => (
+            {productos.map((producto => 
                 <Producto key={producto.id} producto={producto}></Producto>
                 ))
             }
