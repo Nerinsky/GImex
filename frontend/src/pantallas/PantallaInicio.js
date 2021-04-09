@@ -3,34 +3,20 @@ import Producto from '../componentes/Producto';
 import axios from 'axios';
 import CajaCarga from '../componentes/CajaCarga';
 import CajaMensaje from '../componentes/CajaMensaje';
+import { useDispatch, useSelector } from 'react-redux';
+import { listaProductos } from '../acciones/accionesProducto';
 
 
 export default function PantallaInicio()
-{
-    const [productos, setProductos] = useState([]);
-    const [cargando, setCarga] = useState(false);
-    const [error, setError] = useState(false);
-    
+{   
+    const dispatch = useDispatch(); 
+    const listaProducto = useSelector( state => state.listaProducto);
+    const { cargando, error, productos } = listaProducto;
+
     useEffect(() =>
     {
-        const fecthData = async () =>
-        {
-            try
-            {
-                setCarga(true);
-                const { dato } = await axios.get('/api/productos');
-                setCarga(false);
-                setProductos(dato);
-            }
-            catch(err)
-            {
-                setError(err.message);
-                setCarga(false);
-            }
-            
-        };
-        fecthData();
-    }, []);
+        dispatch(listaProductos());
+    }, [dispatch]);
     return(
         <div>
             {cargando ? ( <CajaCarga></CajaCarga>)
